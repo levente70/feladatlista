@@ -26,7 +26,12 @@
       </table>  
     </div>
   
-  
+    <div class="lista">
+        <img src="../assets/nyilJobra.png" alt="Holnapra" height="50px" width="50px" (click)="move('holnapra')">
+        <img src="../assets/nyilBalra.png" alt="Holnapra" height="50px" width="50px" (click)="move('mara')">
+        <img src="../assets/kukakepUj.png" alt="Holnapra" height="50px" width="50px" (click)="delet()">
+    
+      </div>
   
     <div class="doboz lista">
       <h3 class="cim">Task for Today</h3>
@@ -41,26 +46,3 @@
       </table>
     </div>
   </div>
-
-  <table>
-    <tr>
-      <th>holnapra</th>
-    </tr>
-    <tr *ngFor="let c of moveTomorrow">
-      <td >{{c.name}}</td>
-  
-    </tr>
-  </table>
-  
-  
-  <table>
-    <tr>
-      <th>MaraMozog</th>
-    </tr>
-    <tr *ngFor="let m of moveToday">
-      <td >{{m.name}}</td>
-  
-    </tr>
-  </table>
-  
-  

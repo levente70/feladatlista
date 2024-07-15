@@ -45,6 +45,39 @@ export class AppComponent {
 
 
     }
-}
+  }
+
   
+  //Kiválasztott elemek mozgatása
+  move(hova:string){
+    if ( hova == "holnapra" ){
+      this.moveTomorrow.forEach(element => {
+        this.todosTomorrow.push(element);
+        this.todos = this.todos.filter(t => t != element);
+      });
+      while (this.moveTomorrow.pop()){}
+
+    }else if ( hova == "mara" ){
+      this.moveToday.forEach(element => {
+        this.todos.push(element);
+        this.todosTomorrow = this.todosTomorrow.filter(t => t != element);
+      });
+      while (this.moveToday.pop()){}
+
+    }
+  }
+
+  //Kiválasztott elemek törlése
+  delet(){
+    this.moveTomorrow.forEach(element => {
+      this.todos = this.todos.filter(t => t != element);
+    });
+    this.moveToday.forEach(element => {
+      this.todosTomorrow = this.todosTomorrow.filter(t => t != element);
+    });
+    while (this.moveTomorrow.pop()){}
+    while (this.moveToday.pop()){}
+   }
+  
+
 }
