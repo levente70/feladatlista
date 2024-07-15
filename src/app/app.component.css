@@ -1,0 +1,59 @@
+.cim{
+    font-size: medium;
+    margin-top: 0px;
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.doboz{
+    margin-top: 40px;
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.cim{
+    background-color: lightgrey;
+}
+
+.lista{
+    display: block;
+    float:left;
+    height: auto;
+    width:33%;
+    
+}
+
+img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 50%;
+
+}
+
+#iranyitoText{
+    text-align: left;
+    margin: 10px 10px 10px 10px;
+}
+
+#today{
+    text-align: left;
+    margin: 10px 10px 10px 10px;
+}
+#yestuday{
+    text-align: left;
+    margin: 10px 10px 10px 10px;
+}
+
+
+#saves{
+
+    width:250px;
+    text-align: center;
+    float:right;
+    margin: 10px 10px 10px 10px;
+}
+
+

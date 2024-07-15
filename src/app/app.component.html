@@ -1,1 +1,45 @@
-<h1>Hello világ jön a todolist</h1>
+<h1>Hello Todo</h1>
+<div class="doboz">
+    <h1 class="cim">Add new task</h1>
+  
+    <input type="text" size="35" id="iranyitoText" placeholder="Describe task" [(ngModel)]="actual.name"/>
+  
+    <input type="radio" id="today" name="day"  value="ma" checked="checked" [(ngModel)]="when"   checked="checked">
+    <label for="today">today</label>
+    <input type="radio" id="yestuday" name="day" class="iranyito" value="holnap" [(ngModel)]="when">
+    <label for="yestuday">tomorov</label>
+    <button (click)="create(actual)" class="iranyito" id="saves">Save</button>
+  </div>
+  
+  <div>
+    <div class="doboz lista">
+      <h3 class="cim">Task for Today</h3>
+      <table>
+        <tr>
+          <th></th>
+        </tr>
+        <tr *ngFor="let x of todos">
+          
+          <td>{{x.name}}</td>
+          
+        </tr>
+      </table>  
+    </div>
+  
+  
+  
+    <div class="doboz lista">
+      <h3 class="cim">Task for Today</h3>
+      <table>
+  
+        <tbody>
+        <tr *ngFor="let k of todosTomorrow">
+          
+          <td>{{k.name}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
