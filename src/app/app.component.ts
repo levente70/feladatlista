@@ -29,6 +29,22 @@ export class AppComponent {
     else if (this.when == "holnap") {this.todosTomorrow.push(n);}
   }
 
+  //Kiválasztás, a segédtömbök használatával
+  select(p: Todo, hova: string){
+    if (hova == "holnapra"){
+      if (this.moveTomorrow.find(t => t==p) == p){
+        this.moveTomorrow = this.moveTomorrow.filter(t => t != p);  
+      } else {
+          this.moveTomorrow.push(p)
+        }
 
+    }else if (hova == "mara"){
+      if (this.moveToday.find(t => t==p) == p){
+        this.moveToday = this.moveToday.filter(t => t != p);        
+      } else {this.moveToday.push(p)}
+
+
+    }
+}
   
 }

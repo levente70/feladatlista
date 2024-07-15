@@ -19,7 +19,7 @@
           <th></th>
         </tr>
         <tr *ngFor="let x of todos">
-          
+          <td><input type="checkbox" id="mainap[]"  (click)="select(x, 'holnapra')" ></td>
           <td>{{x.name}}</td>
           
         </tr>
@@ -34,12 +34,33 @@
   
         <tbody>
         <tr *ngFor="let k of todosTomorrow">
-          
+          <td><input type="checkbox" id="holnnapi[]"  (click)="select(k, 'mara')" ></td>
           <td>{{k.name}}</td>
         </tr>
         </tbody>
       </table>
     </div>
   </div>
+
+  <table>
+    <tr>
+      <th>holnapra</th>
+    </tr>
+    <tr *ngFor="let c of moveTomorrow">
+      <td >{{c.name}}</td>
+  
+    </tr>
+  </table>
+  
+  
+  <table>
+    <tr>
+      <th>MaraMozog</th>
+    </tr>
+    <tr *ngFor="let m of moveToday">
+      <td >{{m.name}}</td>
+  
+    </tr>
+  </table>
   
   
